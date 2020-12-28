@@ -1,11 +1,20 @@
-#include<iostream>
-#include<algorithm>
+#include <iostream>
+
 using namespace std;
 
-int main(){
-  int arr[] = {1,2,3,4,5};
-  sort(arr, arr+5);
-  cout<<"Sorted"<<endl;
-  cout<<arr[0]<<arr[1]<<endl;
-  return 0;
+int main()
+{
+    int n=10;
+    int arr[]={13,23,432,4,2,66,2,66,99,100};
+  //Bubble sort
+    for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++){
+            if(arr[i]>arr[j]){
+                swap(arr[i],arr[j]);
+            }
+        }
+    }
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
 }
